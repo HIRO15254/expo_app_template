@@ -1,3 +1,4 @@
+import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { AppRegistry } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -24,4 +25,5 @@ export default function App() {
 }
 
 AppRegistry.registerComponent(expo.appKey, () => App);
+registerRootComponent(App);
 // TODO: app.jsonのアプリ名を更新する
