@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
+import { AppRegistry } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { expo } from './../app.json';
 
-import useCachedResources from './src/hooks/useCachedResources';
-import useColorScheme from './src/hooks/useColorScheme';
-import Navigation from './src/navigation';
+import useCachedResources from './hooks/useCachedResources';
+import useColorScheme from './hooks/useColorScheme';
+import Navigation from './navigation';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -20,3 +22,6 @@ export default function App() {
     );
   }
 }
+
+AppRegistry.registerComponent(expo.appKey, () => App);
+// TODO: app.jsonのアプリ名を更新する
